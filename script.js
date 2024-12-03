@@ -6,3 +6,10 @@
 */
 
 // calcumo imc = peso/(altura*altura);
+
+function calcular(event) {
+    event.preventDefault();
+    
+    let peso = document.getElementById('peso').value;
+    let altura = document.getElementById('altura').value;
+}
