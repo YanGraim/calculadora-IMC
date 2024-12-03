@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Calculadora IMC</title>
+    </head>
+    <body>
+        <h1>Calculadora IMC</h1>
+        <form onsubmit="return calcular(event)">
+            <div>
+                <label for="peso">Digite seu peso:</label>
+                <input type="text" name="peso" id="peso"
+                    placeholder="Ex: 70">
+            </div>
+            <div>
+                <label for="altura">Digite sua altura:</label>
+                <input type="text" name="altura" id="altura"
+                    placeholder="Ex: 1.80">
+            </div>
+            <input type="submit" value="Calcular IMC">
+        </form>
+        <footer>
+            <p>&copy; 2024 Yan Graim. Todos os direitos reservados.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
