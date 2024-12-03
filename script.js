@@ -12,4 +12,8 @@ function calcular(event) {
     
     let peso = document.getElementById('peso').value;
     let altura = document.getElementById('altura').value;
+
+
+    let imc = peso/(altura*altura);
+    console.log(imc);
 }

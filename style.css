@@ -3,6 +3,7 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -61,5 +62,23 @@ input[type="submit"]:hover {
 }
 
 footer {
-    margin-top: 16px;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #8e8e8e;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
 }
