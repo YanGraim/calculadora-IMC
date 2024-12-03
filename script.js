@@ -14,20 +14,21 @@ function calcular(event) {
     let altura = document.getElementById('altura').value;
 
     let imc = peso/(altura*altura);
+
+    resultado = document.getElementById('resultado');
+
     if(imc < 17) {
-        resultado = document.getElementById('resultado');
-        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Você está <strong>muito abaixo</strong> do peso</p>`
+        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc.toFixed(2)}</strong>.</p><p>Você está <strong>muito abaixo</strong> do peso!</p>`
     }else if(imc > 17 && imc <= 18.49) {
-        resultado = document.getElementById('resultado');
-        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Você está <strong>abaixo</strong> do peso</p>`
+        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc.toFixed(2)}</strong>.</p><p>Você está <strong>abaixo</strong> do peso!</p>`
     }else if(imc > 18.5 && imc <= 24.99) {
-        resultado = document.getElementById('resultado');
-        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Você está com o peso <strong>normal</strong></p>`
+        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc.toFixed(2)}</strong>.</p><p>Você está com o peso <strong>ideal</strong>!</p>`
     } else if(imc > 25 && imc < 29.99) {
-        resultado = document.getElementById('resultado');
-        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Você está <strong>acima</strong> do peso</p>`
+        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc.toFixed(2)}</strong>.</p><p>Você está <strong>acima</strong> do peso!</p>`
     }else{
-        resultado = document.getElementById('resultado');
-        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Cuidado <strong>obesidade</strong></p>`
+        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc.toFixed(2)}</strong>.</p><p>Cuidado <strong>obesidade</strong>!</p>`
     }
+
+    document.getElementById('peso').value = '';
+    document.getElementById('altura').value = '';
 }
