@@ -23,8 +23,11 @@ function calcular(event) {
     }else if(imc > 18.5 && imc <= 24.99) {
         resultado = document.getElementById('resultado');
         resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Você está com o peso <strong>normal</strong></p>`
-    } else {
+    } else if(imc > 25 && imc < 29.99) {
         resultado = document.getElementById('resultado');
         resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Você está <strong>acima</strong> do peso</p>`
+    }else{
+        resultado = document.getElementById('resultado');
+        resultado.innerHTML = `<p> Seu resultado foi: <strong>${imc}</strong></p><p>Cuidado <strong>obesidade</strong></p>`
     }
 }
